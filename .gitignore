@@ -1,2 +1,4 @@
+#executable files
 *.exe
+#vscode settings for cpp
 .vscode
