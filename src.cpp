@@ -16,21 +16,21 @@ void display(int *board)
 
 bool wincheck(int *a)
 {
-    if(a[0]==1&&a[4]==1&&a[8]==1){cout<<"PLAYER 2 WINS!\n";return true;}
-    else if(a[0]==2&&a[4]==2&&a[8]==2){cout<<"PLAYER 1 WINS!\n";return true;}
-    else if(a[2]==2&&a[4]==2&&a[6]==2){cout<<"PLAYER 1 WINS!\n";return true;}
-    else if(a[2]==1&&a[4]==1&&a[6]==1){cout<<"PLAYER 2 WINS!\n";return true;}
+    if(a[0]==1&&a[4]==1&&a[8]==1){cout<<"PLAYER 1 WINS!\n";return true;}
+    else if(a[0]==2&&a[4]==2&&a[8]==2){cout<<"PLAYER 2 WINS!\n";return true;}
+    else if(a[2]==2&&a[4]==2&&a[6]==2){cout<<"PLAYER 2 WINS!\n";return true;}
+    else if(a[2]==1&&a[4]==1&&a[6]==1){cout<<"PLAYER 1 WINS!\n";return true;}
     
     for(int i=0;i<=6;i+=3)
     {
-        if(a[i]==2&&a[i+1]==2&&a[i+2]==2){cout<<"PLAYER 1 WINS!\n";return true;}
-        else if(a[i]==1&&a[i+1]==1&&a[i+2]==1){cout<<"PLAYER 2 WINS!\n";return true;}
+        if(a[i]==2&&a[i+1]==2&&a[i+2]==2){cout<<"PLAYER 2 WINS!\n";return true;}
+        else if(a[i]==1&&a[i+1]==1&&a[i+2]==1){cout<<"PLAYER 1 WINS!\n";return true;}
     }
     
     for(int i=0;i<3;i++)
     {
-        if(a[i]==2&&a[i+3]==2&&a[i+6]==2){cout<<"PLAYER 1 WINS!\n";return true;}
-        else if(a[i]==1&&a[i+3]==1&&a[i+6]==1){cout<<"PLAYER 2 WINS!\n";return true;}
+        if(a[i]==2&&a[i+3]==2&&a[i+6]==2){cout<<"PLAYER 2 WINS!\n";return true;}
+        else if(a[i]==1&&a[i+3]==1&&a[i+6]==1){cout<<"PLAYER 1 WINS!\n";return true;}
     }
     
     int flag=0;
@@ -74,4 +74,3 @@ int main()
     cout<<"\r\n\r\nPRESS ANY KEY TO EXIT : ";cin>>p;
     return 0;
 }
-
